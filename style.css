@@ -1,6 +1,7 @@
 :root {
   --color-gray: #242323;
   --color-light-gray: #f5f5f5;
+  --color-body-gray: #f9fafa;
 }
 
 *,
@@ -19,7 +20,10 @@ html {
 body {
   font-family: "Helvetica", sans-serif;
   text-align: center;
+  background-color: var(--color-body-gray)
 }
+
+/* ------ Header ------ */
 
 header {
   position: sticky;
@@ -27,7 +31,7 @@ header {
   width: 100%;
   height: 80px;
   background: var(--color-gray);
-  z-index: 1;
+  z-index: 999;
 }
 
 nav {
@@ -72,7 +76,7 @@ nav * {
 /* ------ BODY ------ */
 .body-container {
   margin: 0 auto;
-  margin-top: 100px;
+  /* margin-top: 100px; */
   max-width: 1000px;
 }
 
@@ -80,14 +84,14 @@ nav * {
   position: relative;
   text-align: center;
   margin: 1rem auto;
-  height: 100vh;
+  height: calc(100vh + 6rem);
 }
 
 /* ------ HOME ------ */
 
 .hotel-text {
   margin: 5rem 0;
-  border: 1px solid green;
+  border: 1px solid red;
 }
 
 .big-text {
@@ -114,10 +118,49 @@ nav * {
   margin-bottom: 2rem;
 }
 
+.home {
+  background-color: aqua;
+}
+
 /* ------ ABOUT ------ */
 .date-wrapper {
   width: 100%;
   height: 50px;
   background-color: darkcyan;
   margin: 2rem auto 5rem auto;
+}
+
+.about {
+  background-color: #242323;
+}
+
+/* ------ ROOMS ------ */
+.rooms {
+  border: 1px solid green;
+  display: grid;
+  place-items: center;
+}
+
+.rooms-parallax-img {
+  position: relative;
+  width: 980px;
+  /* height: 631px; */
+  height: 100vh;
+  /* background-size: cover; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url("https://static.wixstatic.com/media/84770f_98aabcec66e34956acf748305c555ec3~mv2_d_2500_1658_s_2.jpg/v1/fill/w_980,h_630,al_c,q_85,usm_0.66_1.00_0.01/84770f_98aabcec66e34956acf748305c555ec3~mv2_d_2500_1658_s_2.webp");
+  z-index: 1;
+}
+
+.rooms-content-card {
+  position: absolute;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 500px;
+  background-color: cornflowerblue;
 }
