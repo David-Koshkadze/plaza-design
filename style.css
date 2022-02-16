@@ -1,7 +1,6 @@
 :root {
   --color-gray: #242323;
   --color-light-gray: #f5f5f5;
-  --color-body-gray: #f9fafa;
 }
 
 *,
@@ -13,6 +12,9 @@
 }
 
 html {
+  font-size: 16px;
+  color: #242323;
+  line-height: 1.5;
   scroll-padding-top: 6rem;
   scroll-behavior: smooth;
 }
@@ -20,7 +22,7 @@ html {
 body {
   font-family: "Helvetica", sans-serif;
   text-align: center;
-  background-color: var(--color-body-gray);
+  background-color: #ffffff; 
 }
 
 /* ------ Header ------ */
@@ -209,6 +211,98 @@ nav * {
 }
 
 /* ------ GALLERY ------ */
+.gallery {
+  height: 100vh;
+  border: 1px solid orange;
+  padding-top: 10rem;
+}
+
+/* ------ Things to do ------ */
+.things-to-do {
+  height: 100vh;
+  border: 1px solid purple;
+  padding-top: 10rem;
+}
+
+.seeanddo-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 0 auto;
+  margin-top: 2rem;
+  place-content: center;
+  place-items: center;
+}
+
+.seeanddo-item {
+  width: 80%;
+  height: 150px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.seeanddo-item > div {
+  margin: 0.5rem auto;
+}
+
+
+/* ------------------------ */
+/* ------ Guest Review ------ */
+.guest-review {
+  height: 100vh;
+  position: relative;
+  width: 980px;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url("https://static.wixstatic.com/media/84770f_98aabcec66e34956acf748305c555ec3~mv2_d_2500_1658_s_2.jpg/v1/fill/w_980,h_630,al_c,q_85,usm_0.66_1.00_0.01/84770f_98aabcec66e34956acf748305c555ec3~mv2_d_2500_1658_s_2.webp");
+  z-index: 1;
+}
+
+.guest-review-card {
+  position: absolute;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 400px;
+  background-color: var(--color-body-gray);
+  z-index: 1;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  gap: 2rem;
+}
+
+
+/* ------ Contact ------ */
+.contact-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #f4f4f5;
+  text-align: center;
+  padding-top: 4.5rem;  
+}
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-form > input {
+  background-color: #ffffff;
+  border: 1px solid #242323;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
 
 /* --------------------------- */
 /* ------ UTILS ------ */
@@ -246,6 +340,13 @@ nav * {
   background-color: var(--color-gray);
   color: white;
 }
+
+.btn-dark-submit {
+  background-color: var(--color-gray);
+  border: 1px solid white;
+  color: white;
+}
+
 
 .paragraph-big-text {
   font-size: 2rem;
