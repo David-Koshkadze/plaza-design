@@ -20,7 +20,7 @@ html {
 body {
   font-family: "Helvetica", sans-serif;
   text-align: center;
-  background-color: var(--color-body-gray)
+  background-color: var(--color-body-gray);
 }
 
 /* ------ Header ------ */
@@ -60,23 +60,9 @@ nav * {
   transition: all 0.2s ease-in-out;
 }
 
-.nav-btn {
-  border: 1px solid #ffffff;
-  padding: 0.7rem 1.5rem;
-  background: transparent;
-  color: white;
-  cursor: pointer;
-}
-
-.nav-btn:hover {
-  background: #ffffff;
-  color: var(--color-gray);
-}
-
 /* ------ BODY ------ */
 .body-container {
   margin: 0 auto;
-  /* margin-top: 100px; */
   max-width: 1000px;
 }
 
@@ -84,7 +70,6 @@ nav * {
   position: relative;
   text-align: center;
   margin: 1rem auto;
-  height: calc(100vh + 6rem);
 }
 
 /* ------ HOME ------ */
@@ -110,12 +95,11 @@ nav * {
   position: relative;
   width: 980px;
   height: 631px;
-  /* background-size: cover; */
+  /* background-size: contain; */
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-image: url("https://static.wixstatic.com/media/84770f_2d6f401da0284208a7ad5d274041dffd~mv2_d_2500_1658_s_2.jpg/v1/fill/w_980,h_631,al_c,q_85,usm_0.66_1.00_0.01/84770f_2d6f401da0284208a7ad5d274041dffd~mv2_d_2500_1658_s_2.webp");
-  margin-bottom: 2rem;
 }
 
 .home {
@@ -123,19 +107,36 @@ nav * {
 }
 
 /* ------ ABOUT ------ */
+.about {
+  height: calc(100vh - 80px - 1rem);
+  padding: 2.5rem 0;
+}
+
 .date-wrapper {
   width: 100%;
   height: 50px;
   background-color: darkcyan;
-  margin: 2rem auto 5rem auto;
 }
 
-.about {
-  background-color: #242323;
+.about-text-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #f9fafa;
+  display: grid;
+  place-content: center;
+  background: green;
+}
+
+.about-text {
+  margin: 0 auto;
+  border: 1px solid red;
+  width: 60%;
+  height: auto;
 }
 
 /* ------ ROOMS ------ */
 .rooms {
+  height: 100vh;
   border: 1px solid green;
   display: grid;
   place-items: center;
@@ -146,7 +147,7 @@ nav * {
   width: 980px;
   /* height: 631px; */
   height: 100vh;
-  /* background-size: cover; */
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -157,10 +158,104 @@ nav * {
 .rooms-content-card {
   position: absolute;
   margin: 0 auto;
+  padding: 0 2.5rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 40%;
-  height: 500px;
-  background-color: cornflowerblue;
+  height: 400px;
+  background-color: var(--color-body-gray);
+  z-index: 1;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  gap: 2rem;
+}
+
+/* ------ SERVICES ------ */
+.services {
+  height: 100vh;
+  border: 1px solid blue;
+  padding-top: 10rem;
+}
+
+.service-items-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 0 auto;
+  margin-top: 2rem;
+  place-content: center;
+  place-items: center;
+}
+
+.service-item {
+  width: 80%;
+  height: 150px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.service-item > div {
+  margin: 0.5rem auto;
+}
+
+.service-item-icon {
+  width: 50px;
+  height: 50px;
+  border: 1px solid dodgerblue;
+}
+
+/* ------ GALLERY ------ */
+
+/* --------------------------- */
+/* ------ UTILS ------ */
+
+.btn {
+  padding: 0.8rem 2rem;
+  border: none;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 0;
+  text-transform: none;
+  transition: 300ms ease-in-out;
+}
+
+/* Dark Button */
+.btn-dark {
+  background-color: var(--color-gray);
+  border: 1px solid white;
+  color: white;
+}
+
+.btn-dark:hover {
+  background-color: white;
+  color: var(--color-gray);
+}
+
+.btn-light {
+  background-color: white;
+  border: 1px solid var(--color-gray);
+  color: var(--color-gray);
+}
+
+.btn-light:hover {
+  background-color: var(--color-gray);
+  color: white;
+}
+
+.paragraph-big-text {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--color-gray);
+  margin: 1rem auto;
+}
+
+.paragraph-small-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 100;
 }
