@@ -184,13 +184,13 @@
       <div class="paragraph-big-text">Contact Us</div>
       <div class="contact-form">
         <form>
-          <div>
-            <div>
+          <div class="contact-flex-1">
+            <div class="form-flex-1" style="width: 100%">
               <label for="name">Enter Your Name</label>
               <input type="text" id="name" name="name" placeholder="Name" />
             </div>
 
-            <div>
+            <div class="form-flex-1" style="width: 100%;">
               <label for="email">Enter Your Email *</label>
               <input
                 type="email"
@@ -202,22 +202,26 @@
             </div>
           </div>
 
-          <label for="subject">Enter Your Subject</label>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            placeholder="Subject"
-          />
+          <div class="form-flex-1">
+            <label for="subject">Enter Your Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Subject"
+            />
+          </div>
 
-          <label for="message">Enter Your Message</label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Message"
-          ></textarea>
+          <div class="form-flex-1">
+            <label for="message">Enter Your Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Message"
+            ></textarea>
+          </div>
 
-          <input type="submit" class="btn btn-dark-submit" value="Submit" />
+          <input type="submit" class="btn-dark-submit" value="Submit" />
         </form>
       </div>
     </div>
