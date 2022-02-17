@@ -77,13 +77,11 @@ nav * {
 /* ------ HOME ------ */
 
 .hotel-text {
-  margin: 5rem 0;
-  border: 1px solid red;
+  margin: 4rem 0;
 }
 
 .big-text {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
   letter-spacing: 3px;
 }
 
@@ -117,9 +115,29 @@ nav * {
 
 .date-wrapper {
   width: 100%;
-  height: 50px;
+  height: auto;
   background-color: darkcyan;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
 }
+
+.date-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.date-input-wrapper label {
+  font-size: 12px;
+}
+
+.date-input-wrapper input { 
+  padding: 0.5rem 0;
+}
+
+
+/* About Content */
 
 .about-text-wrapper {
   width: 100%;
@@ -192,7 +210,7 @@ nav * {
 .service-item {
   width: 80%;
   height: 150px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -235,7 +253,7 @@ nav * {
 .seeanddo-item {
   width: 80%;
   height: 150px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -369,6 +387,13 @@ nav * {
   background-color: var(--color-gray);
   color: white;
 }
+
+.btn-very-dark {
+  background-color: var(--color-gray);
+  color: white;
+}
+
+
 
 .paragraph-big-text {
   font-size: 2rem;

@@ -23,8 +23,8 @@
     <div class="body-container">
       <div class="content home" id="home">
         <div class="hotel-text">
-          <p class="big-text">ANTON & LILY</p>
-          <p class="small-text">- Bed & Breakfast -</p>
+          <div class="big-text">ANTON & LILY</div>
+          <div class="small-text">- Bed & Breakfast -</div>
         </div>
 
         <div class="parallax-img"></div>
@@ -36,7 +36,29 @@
       </div>
 
       <div class="content about" id="about">
-        <div class="date-wrapper"></div>
+        <div class="date-wrapper">
+          <div class="date-input-wrapper">
+            <label for="check_in">Check In</label>
+            <input type="date" name="check_in" id="check_out" />
+          </div>
+
+          <div class="date-input-wrapper">
+            <label for="check_out">Check Out</label>
+            <input type="date" name="check_out" id="check_out" />
+          </div>
+
+          <div class="date-input-wrapper">
+            <label for="adults">Adults</label>
+            <input type="number" name="adults" />
+          </div>
+
+          <div class="date-input-wrapper">
+            <label for="adults">Adults</label>
+            <input type="number" name="adults" />
+          </div>
+
+          <a href="#" class="btn btn-very-dark">Search</a>
+        </div>
         <div class="about-text-wrapper">
           <h1 style="margin-bottom: 5rem">ABOUT</h1>
           <p class="about-text">
@@ -190,7 +212,7 @@
               <input type="text" id="name" name="name" placeholder="Name" />
             </div>
 
-            <div class="form-flex-1" style="width: 100%;">
+            <div class="form-flex-1" style="width: 100%">
               <label for="email">Enter Your Email *</label>
               <input
                 type="email"
